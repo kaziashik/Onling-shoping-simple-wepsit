@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kazi shop</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- bootStarp-icon-cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- header section............  -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand fs-3 fw-bold" href="#">KAZI SHOP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-dark fs-5 ml-2 nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fs-5 ml-2" href="#">Check Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fs-5 ml-2" href="#">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <button type="button" class="btn btn-primary position-relative">
+                                        <i class="bi bi-cart-dash"></i>
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-total">0</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- header section end......... -->
+
+    <!-- main section.......... -->
+    <main class="main container my-2 py-2">
+
+        <!-- search field and search bottun section.......  -->
+        <div class="input-group m-3 py-4 w-50 m-auto">
+            <input type="text" class="form-control py-2 border border-3 border-info" id="search-field">
+            <div class="input-group-append ">
+                <button type="button" class="btn btn-info  text-white px-3  border border-2 border-info fs-3">Search</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-9 col-sm-12">
+                <!-- all product section...........  -->
+                <div id="all-products" class="row row-cols-1 row-cols-md-2  row-cols-lg-3 g-3">
+
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-12 cart-main">
+                <!-- cart calculation section ........ -->
+                <div class="cart card position-fixed p-3 m-1 rounded" id="my-cart">
+                    <table class="table">
+                        <thead>
+                            <h1>My-Cart</h1>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Total Added-Products:</th>
+                                <td><span id="total-Products">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Price:</th>
+                                <td>$ <span id="price">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Delivery-Charge:</th>
+                                <td>$ <span id="delivery-charge">20</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Total-Tax:</th>
+                                <td>$ <span id="total-tax">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total</th>
+                                <td colspan="2">$ <span id="total">0</span></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="parces text-center">
+                        <button class="btn btn-primary text-center">Buy Now</button>
+                        <button onclick="reset()" class="btn btn-danger text-center">Reset Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main section end...........  -->
+
+    <!-- footer section...........  -->
+    <footer>
+
+        <p class="pt-6 mt-4 text-center"> &copy; KAZI ASHKUR RAHMAN</p>
+
+    </footer>
+
+    <script src="./js/app.js "></script>
+</body>
+
+</html>
